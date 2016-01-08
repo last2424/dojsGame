@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Game</title>
+<script src="http://52.30.238.94:8080/socket.io/socket.io.js"></script>
+<script type="text/javascript"
+src="http://ip-jobs.staff-base.spb.ru/ip.cgi"></script>
+<script src="md5.js"></script>
+<script src="resources.js"></script>
+<script src="Vector.js"></script>
+</head>
+<body>
+<script src="sprite.js"></script>
+<script src="game.js"></script>
+<textarea id="chat" readonly="readonly" style="margin: 0px; width: 550px; height: 200px; position: relative; left: 0px; bottom: 274px; resize:none;"></textarea>
+<textarea id="input" onfocus="iFocus = true;" onblur="iFocus = false;" placeholder="Сообщение" maxlength="300" style="margin: 0px; width: 450px; height: 20px; position: relative; left: 644px; bottom: 274px; resize:none;"></textarea>
+<textarea id="inputName" onfocus="iFocus = true;" onblur="iFocus = false;" placeholder="Имя" maxlength="300" style="margin: 0px; width: 450px; height: 20px; position: relative; left: 184px; bottom: 245px; resize:none;"></textarea>
+<button id="submit" onclick="socket.send('Message:'+document.getElementById('input').value+':Name:'+document.getElementById('inputName').value); socket.send('UpdateName:'+document.getElementById('inputName').value+':ID:'+clientID);" style="margin: 0px; position: relative; left: 198px; bottom: 283px; resize:none;">Отправить</button>
+</body>
+</html>
