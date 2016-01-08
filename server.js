@@ -1,4 +1,4 @@
-﻿var io = require("socket.io").listen(process.env.PORT || 8001);
+﻿var io = require("socket.io").listen(parseInt(process.env.PORT || 8001));
 var prClass = require("./Player");
 
 io.set('log level', 1);
