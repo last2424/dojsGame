@@ -1,0 +1,13 @@
+{
+  "name": "dojsGame",
+  "description": "Server game",
+  "scripts": {
+    "postdeploy": "server.js",
+    "pr-predestroy": "server.js"
+  },
+  "env": {
+  },
+  "addons": [
+
+  ]
+}
